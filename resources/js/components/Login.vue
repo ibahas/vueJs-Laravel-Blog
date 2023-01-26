@@ -45,7 +45,7 @@
 export default {
      metaInfo: {
         title: "Login ",
-        titleTemplate: "%s - 2021",
+        titleTemplate: "%s - 2023",
         htmlAttrs: {
             lang: "en",
             amp: true

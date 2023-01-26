@@ -16,7 +16,7 @@ export default {
   },
   metaInfo: {
     title: "Site Blog ",
-    titleTemplate: "%s - 2021",
+    titleTemplate: "%s - 2023",
     htmlAttrs: {
       lang: "en",
       amp: true,

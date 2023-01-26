@@ -15,7 +15,6 @@ use Illuminate\Validation\Rule;
 
 class UsersController extends Controller
 {
-    //
     public function register(Request $request)
     {
         $validator = Validator::make($request->all(), [
@@ -28,7 +27,7 @@ class UsersController extends Controller
         }
         $user = User::create([
             'name' => $request->name,
-            'email' => $request->email,     
+            'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);
         return response()->json([

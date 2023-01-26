@@ -7,7 +7,6 @@ import Login from '../components/Login.vue';
 import Signup from '../components/Signup.vue';
 import Logout from '../components/Logout.vue';
 import AdminPanel from '../components/AdminPanel.vue';
-import { Role } from "../helpers/role.js";
 import editPost from '../components/editPost.vue';
 import PathNotFound from '../components/PathNotFound.vue';
 import VueMeta from 'vue-meta'

@@ -1,0 +1,56 @@
+# About Installation
+
+
+```sh
+composer install
+```
+
+```sh
+Update .env
+```
+
+`Or`
+
+```sh
+File name changed .env.example
+Check the file permissions of the `.env`
+```
+
+### Running file index.php
+
+| Public                             | /                                 |
+| ---------------------------------- | --------------------------------- |
+| no update                          | need to update                    |
+| Only change document root [Cpanel] | copy all files folder public to / |
+| ...                                | change path files.                |
+
+##### check if exists file .htaccess
+
+##
+
+```sh
+npm  install
+npm run watch 'For Dev'
+```
+```sh
+php artisan migrate --seed `Or` http://.../migrate
+
+php artisan storage:link
+
+php artisan ser
+
+```
+
+### check your connection DB.
+
+## Login as admin :
+
+```sh
+Email : admin@admin.com
+Password : 12345678
+```
+
+```sh
+Email : user@user.com
+Password : 12345678
+```

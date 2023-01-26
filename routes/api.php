@@ -11,34 +11,36 @@
 |
  */
 
-// Route::middleware('auth:api')->get('/user', function (Request $request) { 
-//     return $request->user(); 
-// });
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\CommentController;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\ReplyCommentController;
+use App\Http\Controllers\UsersController;
+use Illuminate\Support\Facades\Route;
 
-Route::apiResource('/posts', 'PostController');
-Route::get('/post', 'PostController@allPosts');
-Route::apiResource('/categories', 'CategoryController');
-Route::apiResource('/comments', 'CommentController');
-Route::get('/posts/category/{slug}', 'PostController@category');
-Route::post('/users/register', 'UsersController@register');
-Route::post('/users/login', 'UsersController@login');
-Route::get('/all/categories', 'CategoryController@getAll');
-Route::apiResource('/reply_comments', 'ReplyCommentController');
-Route::post('/reply', 'ReplyCommentController@store');
+Route::apiResource('/posts', PostController::class);
+Route::get('/post', [PostController::class, 'allPosts']);
+Route::apiResource('/categories', CategoryController::class);
+Route::apiResource('/comments', CommentController::class);
 
-Route::post('/changePassword', 'UsersController@changePassword');
+Route::get('/posts/category/{slug}', [PostController::class, 'category']);
 
-Route::get('posts/author/{id?}', 'PostController@author');
+Route::post('/users/register', [UsersController::class, 'register']);
+Route::post('/users/login', [UsersController::class, 'login']);
+Route::get('/all/categories', [CategoryController::class, 'getAll']);
+Route::apiResource('/reply_comments', ReplyCommentController::class);
+Route::post('/reply', [ReplyCommentController::class, 'store']);
 
-Route::get('getUsers', 'UsersController@allUsers');
-Route::get('UsersWithTrashed', 'UsersController@UsersWithTrashed');
-Route::delete('user/{id}/{idAdmin}', 'UsersController@destroy');
-Route::get('user/{id}', 'UsersController@user');
-Route::post('editUser/{id}', 'UsersController@editUser');
-Route::post('restore/user/{id}', 'UsersController@restore');
+Route::post('/changePassword', [UsersController::class, 'changePassword']);
 
+Route::get('posts/author/{id?}', [PostController::class, 'author']);
 
-Route::get('category/{id}', 'CategoryController@getCategory');
-Route::get('userInfo/{id}', 'UsersController@userInfo');
+Route::get('getUsers', [UsersController::class, 'allUsers']);
+Route::get('UsersWithTrashed', [UsersController::class, 'UsersWithTrashed']);
+Route::delete('user/{id?}/{idAdmin}', [UsersController::class, 'destroy']);
+Route::get('user/{id}', [UsersController::class, 'user']);
+Route::post('editUser/{id}', [UsersController::class, 'editUser']);
+Route::post('restore/user/{id}', [UsersController::class, 'restore']);
 
-
+Route::get('category/{id}', [CategoryController::class, 'getCategory']);
+Route::get('userInfo/{id}', [UsersController::class, 'userInfo']);
