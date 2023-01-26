@@ -25,7 +25,7 @@ class PostFactory extends Factory
             'body' => fake()->paragraph(rand(1, 3)),
             'user_id' => Rand(1, 10),
             'category_id' => Rand(1, 10),
-            'photo' => fake()->randomElement([url('/') . 'storage/2.png', url('/') .  'storage/1.png']),
+            'photo' => fake()->randomElement([url('/') . '/storage/2.png', url('/') .  '/storage/1.png']),
         ];
     }
 }
