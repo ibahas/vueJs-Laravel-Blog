@@ -19,7 +19,7 @@
                                             <div class="m-b-25">
                                                 <img
                                                     style="width: 100%; height:90px; margin-top : 1rem"
-                                                    src="http://localhost:8000/storage/2.png"
+                                                    src="https://ibahas.ddns.net/storage/2.png"
                                                     class="img-radius"
                                                     alt="User-Profile-Image"
                                                 />

@@ -1,0 +1,19 @@
+[2021-09-19 15:53:12] local.ERROR: There is no existing directory at "H:\abc\laravel\vueJs-Laravel-Blog-master\storage\logs" and its not buildable: No such file or directory {"exception":"[object] (UnexpectedValueException(code: 0): There is no existing directory at \"H:\\abc\\laravel\\vueJs-Laravel-Blog-master\\storage\\logs\" and its not buildable: No such file or directory at D:\\Projects\\vuejs\\vendor\\monolog\\monolog\\src\\Monolog\\Handler\\StreamHandler.php:172)
+[stacktrace]
+#0 D:\\Projects\\vuejs\\vendor\\monolog\\monolog\\src\\Monolog\\Handler\\StreamHandler.php(100): Monolog\\Handler\\StreamHandler->createDir()
+#1 D:\\Projects\\vuejs\\vendor\\monolog\\monolog\\src\\Monolog\\Handler\\RotatingFileHandler.php(120): Monolog\\Handler\\StreamHandler->write(Array)
+#2 D:\\Projects\\vuejs\\vendor\\monolog\\monolog\\src\\Monolog\\Handler\\AbstractProcessingHandler.php(42): Monolog\\Handler\\RotatingFileHandler->write(Array)
+#3 D:\\Projects\\vuejs\\vendor\\monolog\\monolog\\src\\Monolog\\Logger.php(323): Monolog\\Handler\\AbstractProcessingHandler->handle(Array)
+#4 D:\\Projects\\vuejs\\vendor\\monolog\\monolog\\src\\Monolog\\Logger.php(538): Monolog\\Logger->addRecord(400, 'Unable to prepa...', Array)
+#5 D:\\Projects\\vuejs\\vendor\\laravel\\framework\\src\\Illuminate\\Log\\Logger.php(176): Monolog\\Logger->error('Unable to prepa...', Array)
+#6 D:\\Projects\\vuejs\\vendor\\laravel\\framework\\src\\Illuminate\\Log\\Logger.php(87): Illuminate\\Log\\Logger->writeLog('error', 'Unable to prepa...', Array)
+#7 D:\\Projects\\vuejs\\vendor\\laravel\\framework\\src\\Illuminate\\Log\\LogManager.php(507): Illuminate\\Log\\Logger->error('Unable to prepa...', Array)
+#8 D:\\Projects\\vuejs\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php(118): Illuminate\\Log\\LogManager->error('Unable to prepa...', Array)
+#9 D:\\Projects\\vuejs\\app\\Exceptions\\Handler.php(37): Illuminate\\Foundation\\Exceptions\\Handler->report(Object(LogicException))
+#10 D:\\Projects\\vuejs\\vendor\
+unomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php(60): App\\Exceptions\\Handler->report(Object(LogicException))
+#11 D:\\Projects\\vuejs\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(376): NunoMaduro\\Collision\\Adapters\\Laravel\\ExceptionHandler->report(Object(LogicException))
+#12 D:\\Projects\\vuejs\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(133): Illuminate\\Foundation\\Console\\Kernel->reportException(Object(LogicException))
+#13 D:\\Projects\\vuejs\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#14 {main}
+"} 
